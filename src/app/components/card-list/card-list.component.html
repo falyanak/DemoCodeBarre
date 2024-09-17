@@ -1,0 +1,15 @@
+<div class="check-list-container">
+  <div class="card">
+    <h1>Liste des fournisseurs</h1>
+    <app-search-code-barre-form (search)="search$$.next($event)" />
+    <div class="content">
+      @if(providers()?.length){
+        @for(fournisseur of providers(); track fournisseur.id){
+          <p>Name = {{fournisseur.name}}</p>
+      <app-card-list-item [provider]="fournisseur"
+      />
+        }
+      } @else {Pas de fournisseur pour ce code barre ! ☝🏼}
+    </div>
+  </div>
+</div>

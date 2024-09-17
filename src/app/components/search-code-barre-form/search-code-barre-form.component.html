@@ -1,0 +1,12 @@
+<form
+  class="heading"
+  (submit)="search.emit(codeBarreInput.value); codeBarreInput.value = ''"
+>
+  <input
+    #codeBarreInput
+    name="Saisissez un code barre"
+    placeholder="Ex : 1"
+    required
+  />
+  <button type="submit" id="search-code-barre-button">Rechercher</button>
+</form>
